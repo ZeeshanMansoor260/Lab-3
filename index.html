@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.animi {
+    width: 100px;
+    height: 100px;
+    background-image: url("sky.JPEG");
+    position :relative;
+    -webkit-animation: mymove 3s infinite; /* Chrome, Safari, Opera */ 
+    animation: mymove 5s infinite;
+	z-index: -1;
+}
+
+img.bat {
+	position:relative;
+	top:100px;
+	left:400px;
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes mymove {
+    from {left: -300px;}
+    to {left: 0px;}
+}
+
+/* Standard syntax 
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px; transform: translate(50px,100px);}
+    75%  {top: 50px}
+    100% {top: 100px;}
+	 0%   {top: 0px;}
+    25%  {transform: translate(-150px,0px);}
+	40%  {transform: translate(-125px,0px);}
+    75%  {transform: translate(-100px,0px);}
+	85%  {transform: translate(-75px,0px);}
+    100% {transform: translate(-50px,0px);}
+}*/
+p {
+	color: red;
+}
+p:active +img.bat{
+	color: yellow;
+	
+	position:relative;
+	top:0px;
+	left:400px;
+	
+}
+
+
+div.batman {
+    width: 100px;
+    height: 100px;
+    
+    position: relative;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 20; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 20;
+}
+@keyframes example {
+    0%   { left:0px; top:0px;}
+    25%  { left:200px; top:0px;}
+    50%  { left:200px; top:200px;}
+    75%  { left:0px; top:200px;}
+    100% { left:0px; top:0px;}
+}
+	
+	
+
+</style>
+</head>
+<body>
+
+<p><strong>Note:</strong> The @keyframes rule is not supported in Internet Explorer 9 and earlier versions.</p>
+
+<div class="animi"><img src="sky.jpg" width="4500" height="800"></div>
+<div class="batman"> 
+	<img class="bat" src="batman.jpg" width="110" height="90"> 
+	
+
+</div>
+<div class="moving"> <p>UP</p> <br> <p>DOWN</p> </div>
+
+</body>
+</html>
